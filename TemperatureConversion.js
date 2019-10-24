@@ -19,11 +19,12 @@ switch (menu) {
         listT = temps.split(",");
         listT = listT.map((el) => {
             let converted = temperatureConversion(el);
-            if (choice === "c" && converted === 0) {
-                counter++;
-            } else if (choice === "f" && converted === 32) {
-                counter++;
-            }
+            // if (choice === "c" && converted === 0) {
+            //     counter++;
+            // } else if (choice === "f" && converted === 32) {
+            //     counter++;
+            // }
+            return converted;
         });
         alert("Converted temperatures are: " + listT +
               "\n There are " + counter + " under 0ºC or 32ºF.");
